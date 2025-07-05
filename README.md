@@ -34,6 +34,10 @@ Ele considera:
 - Prazo de entrega
 - UF de origem e destino
 
+## 👨‍💻 Autor
+**Leonardo Coelho**  
+[LinkedIn](https://www.linkedin.com/in/leoscoelho/) • [GitHub](https://github.com/LeonardCoelho)
+
 ---
 
 ## 🚀 Como rodar localmente
@@ -50,7 +54,3 @@ pip install -r requirements.txt
 
 # Rode o app
 streamlit run app.py
-
-## 👨‍💻 Autor
-**Leonardo Coelho**  
-[LinkedIn](https://www.linkedin.com/in/leoscoelho/) • [GitHub](https://github.com/LeonardCoelho)
