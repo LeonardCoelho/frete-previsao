@@ -9,10 +9,10 @@ modelo = joblib.load('modelo_random_forest_tunado.pkl')
 st.set_page_config(page_title="Previsão de Frete", layout="centered")
 st.title("🚛 Previsão de Custo de Frete")
 st.markdown("Preveja o valor estimado de um frete com base em dados como distância, peso e tipo de carga.")
-
 st.divider()
 
-# Inputs organizados em colunas
+# ========================== ENTRADA MANUAL ===============================
+st.subheader("📥 Preencher os dados manualmente")
 col1, col2 = st.columns(2)
 
 with col1:
@@ -26,17 +26,12 @@ with col2:
     uf_origem = st.selectbox("📍 UF Origem", ["SP", "RJ", "MG", "PR", "RS", "SC", "GO", "PE", "ES", "BA"])
     uf_destino = st.selectbox("🎯 UF Destino", ["SP", "RJ", "MG", "PR", "RS", "SC", "GO", "PE", "ES", "BA"])
 
-st.divider()
-
-# Botão de previsão
 if st.button("🔍 Calcular Frete"):
-    # Validação básica
     if uf_origem == uf_destino:
         st.warning("❗ Origem e destino não podem ser iguais.")
     else:
         with st.spinner("Calculando o valor estimado..."):
-            # Montar DataFrame de entrada
-            dados = pd.DataFrame({
+            entrada = pd.DataFrame({
                 'peso_kg': [peso],
                 'distancia_km': [distancia],
                 'prazo_dias': [prazo],
@@ -45,10 +40,34 @@ if st.button("🔍 Calcular Frete"):
                 'origem_uf': [uf_origem],
                 'destino_uf': [uf_destino]
             })
-
-            # Fazer previsão
             try:
-                previsao = modelo.predict(dados)[0]
-                st.success(f"💰 Custo estimado do frete: **R$ {previsao:,.2f}**")
+                resultado = modelo.predict(entrada)[0]
+                st.success(f"💰 Custo estimado do frete: **R$ {resultado:,.2f}**")
             except Exception as e:
-                st.error(f"Erro ao prever: {e}")
+                st.error(f"Erro na previsão: {e}")
+
+st.divider()
+
+# ========================== UPLOAD CSV ===============================
+st.subheader("📄 Ou envie um arquivo CSV")
+
+uploaded_file = st.file_uploader("Envie um CSV com as colunas: peso_kg, distancia_km, prazo_dias, modal, tipo_carga, origem_uf, destino_uf", type=["csv"])
+
+if uploaded_file:
+    try:
+        dados = pd.read_csv(uploaded_file)
+        colunas_esperadas = ['peso_kg', 'distancia_km', 'prazo_dias', 'modal', 'tipo_carga', 'origem_uf', 'destino_uf']
+        if all(col in dados.columns for col in colunas_esperadas):
+            with st.spinner("Calculando previsões em lote..."):
+                previsoes = modelo.predict(dados)
+                dados['frete_estimado_r$'] = previsoes
+                st.success("✅ Previsões realizadas com sucesso!")
+                st.dataframe(dados)
+
+                csv = dados.to_csv(index=False).encode('utf-8')
+                st.download_button("📥 Baixar resultado em CSV", csv, "previsoes_fretes.csv", "text/csv")
+        else:
+            st.error("❌ As colunas do CSV estão erradas ou incompletas. Use o formato correto:")
+            st.code(','.join(colunas_esperadas))
+    except Exception as e:
+        st.error(f"Erro ao processar o arquivo: {e}")
