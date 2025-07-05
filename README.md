@@ -50,3 +50,7 @@ pip install -r requirements.txt
 
 # Rode o app
 streamlit run app.py
+
+## 👨‍💻 Autor
+**Leonardo Coelho**  
+[LinkedIn](https://www.linkedin.com/in/leoscoelho/) • [GitHub](https://github.com/LeonardCoelho)
