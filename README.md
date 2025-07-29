@@ -1,56 +1,93 @@
-# 🚛 Previsão de Custos de Frete com Machine Learning
+# 🚛 Previsão de Custo de Frete
 
-Este projeto usa Machine Learning para prever o custo final de fretes com base em variáveis como peso da carga, distância, prazo, tipo de carga, modal e origem/destino.
-
-🔗 [Acesse o app aqui no Streamlit](https://frete-previsao-fz2s5ocwoc97y6ggf2bm2m.streamlit.app)
-📁 [Veja o notebook do modelo aqui](modelo.ipynb)
+Este projeto utiliza aprendizado de máquina para prever o valor estimado de um frete com base em variáveis como peso, distância, tipo de carga, modal de transporte, origem e destino.
 
 ---
 
-## 📊 Tecnologias Usadas
+## 📂 Estrutura do Projeto
 
-- Python 3.11
+```
+frete-previsao/
+├── data/
+│   └── fretes_simulados.csv
+├── images/
+│   └── Print.jpg
+├── src/
+│   ├── app.py
+│   ├── modelo.ipynb
+│   └── modelo_random_forest_tunado.pkl
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 📊 Tecnologias Utilizadas
+
+- Python 3.10+
+- Pandas
 - Scikit-learn
-- Pandas, NumPy
-- Matplotlib, Seaborn
+- Matplotlib & Seaborn
 - Streamlit
 - Joblib
 
 ---
 
-## 🧠 O que o modelo aprende?
+## 🧪 Como Rodar o Projeto
 
-O modelo Random Forest foi treinado com `GridSearchCV` e alcançou:
+1. **Clone o repositório:**
 
-- MAE: ~**R$ 683**
-- RMSE: ~**R$ 910**
-- R²: ~**0.97**
+```bash
+git clone https://github.com/LeonardCoelho/frete-previsao
+cd frete-previsao
+```
 
-Ele considera:
-- Peso (kg)
-- Distância (km)
-- Tipo de carga (perecível, inflamável etc.)
-- Modal (rodoviário, aéreo etc.)
-- Prazo de entrega
-- UF de origem e destino
+2. **Crie um ambiente virtual (opcional):**
 
-## 👨‍💻 Autor
-**Leonardo Coelho**  
-[LinkedIn](https://www.linkedin.com/in/leoscoelho/) • [GitHub](https://github.com/LeonardCoelho)
+```bash
+python -m venv venv
+source venv/bin/activate  # no Linux/Mac
+venv\Scripts\activate     # no Windows
+```
+
+3. **Instale as dependências:**
+
+```bash
+pip install -r requirements.txt
+```
+
+4. **Execute a aplicação Streamlit:**
+
+```bash
+streamlit run src/app.py
+```
 
 ---
 
-## 🚀 Como rodar localmente
+## 🧠 Como o modelo funciona
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/frete-previsao.git
-cd frete-previsao
+- O modelo foi treinado com uma base simulada de fretes, contendo:
+  - `peso_kg`, `distancia_km`, `prazo_dias`
+  - `tipo_carga`, `modal`, `origem_uf`, `destino_uf`
+- Foram testados modelos de Regressão Linear e Random Forest.
+- O modelo final é um **Random Forest Regressor tunado via GridSearchCV**, salvo como `modelo_random_forest_tunado.pkl`.
 
-# Crie o ambiente virtual
-python -m venv .venv
-source .venv/Scripts/activate  # no Windows
-pip install -r requirements.txt
+---
 
-# Rode o app
-streamlit run app.py
+## 🧾 Exemplo de uso (via app)
+
+Você pode:
+- Inserir os dados manualmente e ver a previsão instantaneamente.
+- Fazer upload de um `.csv` com as colunas esperadas e baixar as previsões.
+
+---
+
+## 📷 Imagem do App
+
+![app](images/Print.jpg)
+
+---
+
+## 📬 Contato
+
+Desenvolvido por [Leonardo Coelho](https://github.com/LeonardCoelho) 🚀
