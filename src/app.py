@@ -3,7 +3,8 @@ import pandas as pd
 import joblib
 
 # Carregar modelo treinado
-modelo = joblib.load('modelo_random_forest_tunado.pkl')
+path = os.path.join(os.path.dirname(__file__), "src", "modelo_random_forest_tunado.pkl")
+modelo = joblib.load(path)
 
 # Título e descrição
 st.set_page_config(page_title="Previsão de Frete", layout="centered")
