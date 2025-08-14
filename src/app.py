@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 
 # Carregar modelo treinado
 path = os.path.join(os.path.dirname(__file__), "src", "modelo_random_forest_tunado.pkl")
