@@ -71,11 +71,10 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-```
+
 👨‍💻 Autor
 
 Leonardo Coelho
 Analista de Transportes | Estudante de Ciência de Dados
 📧 lnrds.coelho@gmail.com
 🔗 [GitHub](https://github.com/LeonardCoelho) | [LinkedIn](https://www.linkedin.com/in/leonardcoelho)
-```
