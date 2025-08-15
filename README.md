@@ -33,7 +33,7 @@ O modelo foi treinado com dados históricos e ajustado com **GridSearchCV** para
 
 ## 📸 Demonstração
 
-![App Preview](images/Print.png)
+![App Preview](images/Print.jpg)
 
 ---
 
