@@ -48,10 +48,6 @@ O modelo foi treinado com dados históricos e ajustado com **GridSearchCV** para
 ┣ 📜 requirements.txt # Dependências do projeto
 ┗ 📜 README.md
 
-yaml
-Copiar
-Editar
-
 ---
 
 ## ⚡ Como Executar Localmente
