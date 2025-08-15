@@ -7,7 +7,7 @@
 Aplicação interativa para **previsão de custos de frete** utilizando **Machine Learning** (Random Forest).  
 O modelo foi treinado com dados históricos e ajustado com **GridSearchCV** para entregar previsões mais precisas.
 
-🔗 **[Acesse o App Online](https://frete-previsao-fz2s5ocwoc97y6ggf2bm2m.streamlit.app/)**
+🔗 **[Acesse o App Online](https://frete-previsao-7ppoibpy6lj4xaidadrcax.streamlit.app/)**
 
 ---
 
