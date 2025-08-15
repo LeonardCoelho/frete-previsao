@@ -1,93 +1,82 @@
-# 🚛 Previsão de Custo de Frete
+# 📦 Previsão de Custos de Frete com Machine Learning
 
-Este projeto utiliza aprendizado de máquina para prever o valor estimado de um frete com base em variáveis como peso, distância, tipo de carga, modal de transporte, origem e destino.
+![Status](https://img.shields.io/badge/status-online-brightgreen)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/streamlit-app-red)
+
+Aplicação interativa para **previsão de custos de frete** utilizando **Machine Learning** (Random Forest).  
+O modelo foi treinado com dados históricos e ajustado com **GridSearchCV** para entregar previsões mais precisas.
+
+🔗 **[Acesse o App Online](https://frete-previsao-fz2s5ocwoc97y6ggf2bm2m.streamlit.app/)**
+
+---
+
+## 🚀 Funcionalidades
+
+- Upload de arquivo Excel/CSV com dados do frete
+- Previsão de custos com base em variáveis logísticas
+- Ajuste automático de parâmetros do modelo
+- Visualização interativa dos resultados
+- Download do resultado previsto
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Python** (pandas, numpy, scikit-learn)
+- **Streamlit** (frontend interativo)
+- **Matplotlib** (visualização de dados)
+- **Joblib** (armazenamento do modelo)
+- **GridSearchCV** (otimização de hiperparâmetros)
+
+---
+
+## 📸 Demonstração
+
+![App Preview](images/app_preview.png)
+
+*(substituir a imagem pelo print ou GIF mais bonito do app)*
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-```
-frete-previsao/
-├── data/
-│   └── fretes_simulados.csv
-├── images/
-│   └── Print.jpg
-├── src/
-│   ├── app.py
-│   ├── modelo.ipynb
-│   └── modelo_random_forest_tunado.pkl
-├── README.md
-└── requirements.txt
-```
+📦 frete-previsao
+┣ 📂 data # Arquivos de dados
+┣ 📂 images # Imagens para o README/app
+┣ 📂 src # Código-fonte da aplicação e scripts
+┣ 📜 app.py # Código principal do Streamlit
+┣ 📜 modelo_frete.pkl # Modelo treinado salvo
+┣ 📜 requirements.txt # Dependências do projeto
+┗ 📜 README.md
+
+yaml
+Copiar
+Editar
 
 ---
 
-## 📊 Tecnologias Utilizadas
-
-- Python 3.10+
-- Pandas
-- Scikit-learn
-- Matplotlib & Seaborn
-- Streamlit
-- Joblib
-
----
-
-## 🧪 Como Rodar o Projeto
-
-1. **Clone o repositório:**
+## ⚡ Como Executar Localmente
 
 ```bash
-git clone https://github.com/LeonardCoelho/frete-previsao
+# 1. Clonar repositório
+git clone https://github.com/LeonardCoelho/frete-previsao.git
 cd frete-previsao
-```
 
-2. **Crie um ambiente virtual (opcional):**
+# 2. Criar ambiente virtual
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+.venv\Scripts\activate     # Windows
 
-```bash
-python -m venv venv
-source venv/bin/activate  # no Linux/Mac
-venv\Scripts\activate     # no Windows
-```
-
-3. **Instale as dependências:**
-
-```bash
+# 3. Instalar dependências
 pip install -r requirements.txt
-```
 
-4. **Execute a aplicação Streamlit:**
+# 4. Rodar o app
+streamlit run app.py
+📌 Autor
+Léo Souza — Analista de Transportes & Estudante de Ciência de Dados
+💼 LinkedIn | 💻 Portfólio no GitHub
 
-```bash
-streamlit run src/app.py
-```
 
----
 
-## 🧠 Como o modelo funciona
-
-- O modelo foi treinado com uma base simulada de fretes, contendo:
-  - `peso_kg`, `distancia_km`, `prazo_dias`
-  - `tipo_carga`, `modal`, `origem_uf`, `destino_uf`
-- Foram testados modelos de Regressão Linear e Random Forest.
-- O modelo final é um **Random Forest Regressor tunado via GridSearchCV**, salvo como `modelo_random_forest_tunado.pkl`.
-
----
-
-## 🧾 Exemplo de uso (via app)
-
-Você pode:
-- Inserir os dados manualmente e ver a previsão instantaneamente.
-- Fazer upload de um `.csv` com as colunas esperadas e baixar as previsões.
-
----
-
-## 📷 Imagem do App
-
-![app](images/Print.jpg)
-
----
-
-## 📬 Contato
-
-Desenvolvido por [Leonardo Coelho](https://github.com/LeonardCoelho) 🚀
+O ChatGPT pode cometer erros. Considere verificar informações importantes.
