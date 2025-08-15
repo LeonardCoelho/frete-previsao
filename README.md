@@ -40,12 +40,12 @@ O modelo foi treinado com dados históricos e ajustado com **GridSearchCV** para
 ## 📂 Estrutura do Projeto
 
 frete-previsao/
-├── data/ # Arquivos de dados
-├── images/ # Imagens para o README/app
-├── src/ # Código-fonte da aplicação e scripts
-├── app.py # Código principal do Streamlit
-├── modelo_frete.pkl # Modelo treinado salvo
-├── requirements.txt # Dependências do projeto
+├── data/             # Arquivos de dados
+├── images/           # Imagens para o README/app
+├── src/              # Código-fonte da aplicação e scripts
+├── app.py            # Código principal do Streamlit
+├── modelo_frete.pkl  # Modelo treinado salvo
+├── requirements.txt  # Dependências do projeto
 └── README.md
 
 ---
