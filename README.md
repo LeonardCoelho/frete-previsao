@@ -44,7 +44,7 @@ frete-previsao/
 ├── images/ # Imagens para o README/app
 ├── src/ # Código-fonte da aplicação e scripts
 ├── app.py # Código principal do Streamlit
-├── modelo_frete.pkl # Modelo treinado salvo
+├── modelo_random_forest_tunado.pkl # Modelo treinado salvo
 ├── requirements.txt # Dependências do projeto
 └── README.md
 
