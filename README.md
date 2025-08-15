@@ -39,6 +39,7 @@ O modelo foi treinado com dados históricos e ajustado com **GridSearchCV** para
 
 ## 📂 Estrutura do Projeto
 
+```
 frete-previsao/ 
 ├── data/ # Arquivos de dados
 ├── images/ # Imagens para o README/app
@@ -47,6 +48,7 @@ frete-previsao/
 ├── modelo_random_forest_tunado.pkl # Modelo treinado salvo
 ├── requirements.txt # Dependências do projeto
 └── README.md
+````
 
 ---
 
