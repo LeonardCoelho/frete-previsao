@@ -71,6 +71,9 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-📌 Autor
-Léo Souza — Analista de Transportes & Estudante de Ciência de Dados
-💼 LinkedIn | 💻 Portfólio no GitHub
+👨‍💻 Autor
+
+Leonardo Coelho
+Analista de Transportes | Estudante de Ciência de Dados
+📧 lnrds.coelho@gmail.com
+🔗 [GitHub](https://github.com/LeonardCoelho) | [LinkedIn](https://www.linkedin.com/in/leonardcoelho)
