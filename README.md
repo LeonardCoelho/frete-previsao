@@ -48,7 +48,7 @@ frete-previsao/
 ├── modelo_random_forest_tunado.pkl # Modelo treinado salvo
 ├── requirements.txt # Dependências do projeto
 └── README.md
-````
+```
 
 ---
 
