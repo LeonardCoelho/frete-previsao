@@ -40,19 +40,18 @@ O modelo foi treinado com dados históricos e ajustado com **GridSearchCV** para
 ## 📂 Estrutura do Projeto
 
 📦 frete-previsao
-┣ 📂 data # Arquivos de dados
-┣ 📂 images # Imagens para o README/app
-┣ 📂 src # Código-fonte da aplicação e scripts
-┣ 📜 app.py # Código principal do Streamlit
-┣ 📜 modelo_frete.pkl # Modelo treinado salvo
-┣ 📜 requirements.txt # Dependências do projeto
-┗ 📜 README.md
+  ┣ 📂 data # Arquivos de dados
+  ┣ 📂 images # Imagens para o README/app
+  ┣ 📂 src # Código-fonte da aplicação e scripts
+  ┣ 📜 app.py # Código principal do Streamlit
+  ┣ 📜 modelo_frete.pkl # Modelo treinado salvo
+  ┣ 📜 requirements.txt # Dependências do projeto
+  ┗ 📜 README.md
 
 ---
 
 ## ⚡ Como Executar Localmente
 
-```bash
 # 1. Clonar repositório
 git clone https://github.com/LeonardCoelho/frete-previsao.git
 cd frete-previsao
@@ -67,10 +66,7 @@ pip install -r requirements.txt
 
 # 4. Rodar o app
 streamlit run app.py
+
 📌 Autor
 Léo Souza — Analista de Transportes & Estudante de Ciência de Dados
 💼 LinkedIn | 💻 Portfólio no GitHub
-
-
-
-O ChatGPT pode cometer erros. Considere verificar informações importantes.
