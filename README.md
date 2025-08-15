@@ -39,7 +39,7 @@ O modelo foi treinado com dados históricos e ajustado com **GridSearchCV** para
 
 ## 📂 Estrutura do Projeto
 
-frete-previsao/
+frete-previsao/ 
 ├── data/ # Arquivos de dados
 ├── images/ # Imagens para o README/app
 ├── src/ # Código-fonte da aplicação e scripts
