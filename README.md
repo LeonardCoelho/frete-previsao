@@ -33,9 +33,7 @@ O modelo foi treinado com dados históricos e ajustado com **GridSearchCV** para
 
 ## 📸 Demonstração
 
-![App Preview](images/app_preview.png)
-
-*(substituir a imagem pelo print ou GIF mais bonito do app)*
+![App Preview](images/Print.png)
 
 ---
 
